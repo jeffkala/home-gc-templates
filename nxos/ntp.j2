@@ -1,1 +1,1 @@
-ntp server pool.ntp.org prefer use-vrf management
+ntp server {{ config_context["ntp"]["server"] }} prefer use-vrf management
