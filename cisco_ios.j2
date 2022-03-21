@@ -7,4 +7,4 @@
 !
 {% include './ios/line.j2' %}
 
-ip route {{ "10.10.10.0/24" | ipaddress_network('__str__') }}
+ip route {{ "10.10.10.0/24" | ipaddress_network('with_netmask') }}
