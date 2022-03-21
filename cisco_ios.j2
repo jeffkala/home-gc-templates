@@ -6,3 +6,5 @@
 
 !
 {% include './ios/line.j2' %}
+
+ip route {{ "10.10.10.0/24" | ipaddress_address('__str__') }}
