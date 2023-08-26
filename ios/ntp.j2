@@ -1,1 +1,3 @@
-ntp server {{ config_context["ntp"]["server"][0] }} prefer
+{% for server in config_context["ntp"]["server"] %}
+ntp server {{ server }} prefer
+{% endfor %}
