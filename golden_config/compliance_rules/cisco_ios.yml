@@ -1,0 +1,11 @@
+---
+- feature_slug: "aaa"
+  platform_slug: "cisco_ios"
+  config_ordered: true
+  match_config: |
+    aaa
+    line
+    username
+    role
+    tacacs
+  config_type: "cli"
