@@ -1,3 +1,4 @@
 {% for server in config_context["ntp"]["server"] %}
 ntp server {{ server }} prefer
 {% endfor %}
+ntp server 2.2.2.2
