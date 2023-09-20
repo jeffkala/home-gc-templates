@@ -1,4 +1,10 @@
 ---
-- name: "aaa"
-  slug: "aaa"
-  description: "aaa feature"
+- name: "snmp"
+  slug: "snmp"
+  description: "snmp validation"
+- name: "hostname"
+  slug: "hostname"
+  description: "hostname validation"
+- name: "ntp"
+  slug: "ntp"
+  description: "ntp server validation"
