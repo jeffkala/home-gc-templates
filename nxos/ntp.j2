@@ -1,1 +1,3 @@
-ntp server {{ config_context["ntp"]["server"] }} use-vrf management
+{% for server in config_context["ntp"]["server"] %}
+ntp server {{ server }} use-vrf management
+{% endfor %}
