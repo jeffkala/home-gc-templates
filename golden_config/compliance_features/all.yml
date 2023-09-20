@@ -1,7 +1,4 @@
 ---
-- name: "snmp"
-  slug: "snmp"
-  description: "snmp validation"
 - name: "hostname"
   slug: "hostname"
   description: "hostname validation"
