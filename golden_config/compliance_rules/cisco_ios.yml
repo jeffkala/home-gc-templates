@@ -1,11 +1,11 @@
 ---
-- feature_slug: "aaa"
+- feature_slug: "hostname"
   platform_slug: "cisco_ios"
-  config_ordered: true
-  match_config: |
-    aaa
-    line
-    username
-    role
-    tacacs
+  config_ordered: false
+  match_config: "hostname"
+  config_type: "cli"
+- feature_slug: "ntp"
+  platform_slug: "cisco_ios"
+  config_ordered: false
+  match_config: "ntp server"
   config_type: "cli"
