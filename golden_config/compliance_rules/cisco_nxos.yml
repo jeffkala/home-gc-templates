@@ -1,0 +1,11 @@
+---
+- feature_slug: "hostname"
+  platform_slug: "cisco_nxos"
+  config_ordered: false
+  match_config: "hostname"
+  config_type: "cli"
+- feature_slug: "ntp"
+  platform_slug: "cisco_nxos"
+  config_ordered: false
+  match_config: "ntp server"
+  config_type: "cli"
