@@ -1,1 +1,2 @@
-{% include ./eos/ntp.j2 %}
+
+{% include './eos/hostname.j2' %}
