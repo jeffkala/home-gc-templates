@@ -12,5 +12,5 @@
 - feature_slug: "snmp"
   platform_network_driver: "cisco_ios"
   config_ordered: false
-  match_config: "ntp server"
+  match_config: "snmp"
   config_type: "cli"
