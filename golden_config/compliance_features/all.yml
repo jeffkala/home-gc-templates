@@ -5,3 +5,6 @@
 - name: "ntp"
   slug: "ntp"
   description: "ntp server validation"
+- name: "snmp"
+  slug: "snmp"
+  description: "snmp server validation"
