@@ -9,3 +9,8 @@
   config_ordered: false
   match_config: "ntp server"
   config_type: "cli"
+- feature_slug: "snmp"
+  platform_network_driver: "cisco_ios"
+  config_ordered: false
+  match_config: "ntp server"
+  config_type: "cli"
