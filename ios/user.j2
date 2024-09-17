@@ -1,4 +1,2 @@
-username cleartext privilege 15 password 0 clearpass
-{% raw -%}
-username {{ "device-ssh-creds" | get_secret_by_secret_group_name('username') }} privilege 15 secret 9 {{ "device-ssh-creds" | get_secret_by_secret_group_name('password') | encrypt_cisco_type9 }}
-{% endraw -%}
+username admin password 0 cisco
+username user1 password 0 pwd1
