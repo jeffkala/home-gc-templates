@@ -18,15 +18,6 @@ vrf definition Mgmt-vrf
  address-family ipv6
  exit-address-family
 !
-{% if config_context["aaa-new-model"] == false %}
-no aaa new-model
-{% else %}
-aaa new-model
-{% endif %}
-{% include "./ios/call_home.j2" %}
-!
-!
-!
 
 {% if virtual_chassis is defined and virtual_chassis is not none %}
 {% for device in virtual_chassis['members'] %}
@@ -131,10 +122,6 @@ policy-map system-cpp-policy
 !
 !
 {% include './ios/interfaces.j2' %}
-!
-{% include './ios/snmp.j2' %}
-!
-{% include './ios/syslog.j2' %}
 !
 ip http server
 ip http authentication local
