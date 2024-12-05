@@ -1,0 +1,46 @@
+interface {{ interface["name"] }}
+{%  if interface["description"] | length > 1 %}
+ description {{ interface["description"] }}
+{%  endif %}
+{%  if interface["ip_addresses"] | length > 0 %}
+{%      for addr in interface["ip_addresses"] %}
+{%          if addr["address"] is defined %}
+ ip address {{ addr["address"] }}
+{%          endif %}
+{%      endfor %}
+{% else %}
+ no ip address
+ test after ip
+{%  endif %}
+ before int shutdown
+{%  if interface["enabled"] == false %}
+ shutdown
+{%  endif %}
+ test before int mode access
+{%  if interface["mode"] == "ACCESS" %}
+ switchport mode access
+ switchport access vlan {{ interface["untagged_vlan"]["vid"] }}
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ no cdp enable
+ no lldp transmit
+ no lldp receive
+ switchport port-security mac-address sticky
+ switchport port-security maximum 1
+ switchport port-security violation restrict
+{%  endif %}
+ test after int mode access and before int mode trunk
+{%  if interface["mode"] == "TAGGED"%}
+ switchport mode trunk
+{%      for vlan in interface["tagged_vlans"] %}
+ switchport trunk allowed vlan add {{ vlan["vid"] }}
+{%      endfor %}
+{%  endif %}
+ test after int mode trunk and before tagged all
+{%  if interface["mode"] == "TAGGED_ALL"%}
+ switchport mode trunk
+ swithport trunk allowed vlan all
+{%  endif %}
+ test after tagged all
+ negotiation auto
+!
