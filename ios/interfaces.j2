@@ -1,9 +1,9 @@
 {% if virtual_chassis is not none %}
 {% for member in virtual_chassis["members"] %}
 {% for interface in member["interfaces"] %}
-{% if 'Loop' in interface["name"] %}
+{% if 'meh' in interface["name"] %}
 {% include "./ios/_loopback.j2" %}
-{% elif 'vlan' or 'Vlan' in interface["name"] %}
+{% elif 'svlans' or 'sVlans' in interface["name"] %}
 {% include "./ios/_svi.j2" %}
 {% else %}
 {% include "./ios/_physical.j2" %}
@@ -12,9 +12,9 @@
 {% endfor %}
 {% else %}
 {% for interface in interfaces %}
-{% if 'Loop' in interface["name"] %}
+{% if 'meh' in interface["name"] %}
 {% include "./ios/_loopback.j2" %}
-{% elif 'vlan' or 'Vlan' in interface["name"] %}
+{% elif 'svlans' or 'sVlans' in interface["name"] %}
 {% include "./ios/_svi.j2" %}
 {% else %}
 {% include "./ios/_physical.j2" %}
