@@ -19,7 +19,9 @@ interface {{ interface["name"] }}
  test before int mode access
 {%  if interface["mode"] == "ACCESS" %}
  switchport mode access
+ {% if interface["untagged_vlan"] is defined %}
  switchport access vlan {{ interface["untagged_vlan"]["vid"] }}
+ {% endif %}
  spanning-tree portfast
  spanning-tree bpduguard enable
  no cdp enable
