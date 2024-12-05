@@ -3,7 +3,7 @@
 {% for interface in member["interfaces"] %}
 {% if 'meh' in interface["name"] %}
 {% include "./ios/_loopback.j2" %}
-{% elif 'svlans' or 'sVlans' in interface["name"] %}
+{% elif 'svans' in interface["name"] %}
 {% include "./ios/_svi.j2" %}
 {% else %}
 {% include "./ios/_physical.j2" %}
@@ -14,7 +14,7 @@
 {% for interface in interfaces %}
 {% if 'meh' in interface["name"] %}
 {% include "./ios/_loopback.j2" %}
-{% elif 'svlans' or 'sVlans' in interface["name"] %}
+{% elif 'slans' or 'slans' in interface["name"] %}
 {% include "./ios/_svi.j2" %}
 {% else %}
 {% include "./ios/_physical.j2" %}
