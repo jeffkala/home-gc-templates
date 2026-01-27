@@ -4,13 +4,13 @@
   config_ordered: false
   match_config: "hostname"
   config_type: "cli"
-  tags__name: "gc-rule-tag"
 - feature_slug: "ntp"
   platform_network_driver: "cisco_ios"
   config_ordered: false
   match_config: "ntp server"
   config_type: "cli"
-  tags__name: "gc-rule-tag"
+  tags:
+    - tag__name: "gc-rule-tag"
 - feature_slug: "snmp"
   platform_network_driver: "cisco_ios"
   config_ordered: false
