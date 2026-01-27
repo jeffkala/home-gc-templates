@@ -4,6 +4,8 @@
   config_ordered: false
   match_config: "hostname"
   config_type: "cli"
+  tags:
+    - name: "Active"
 - feature_slug: "ntp"
   platform_network_driver: "cisco_ios"
   config_ordered: false
