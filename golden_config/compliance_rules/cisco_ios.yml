@@ -5,7 +5,7 @@
   match_config: "hostname"
   config_type: "cli"
   tags:
-    - name: "Active"
+    - name: "gc-rule-tag"
 - feature_slug: "ntp"
   platform_network_driver: "cisco_ios"
   config_ordered: false
