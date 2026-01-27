@@ -10,7 +10,7 @@
   match_config: "ntp server"
   config_type: "cli"
   tags:
-    - id: "f8ef6dd5-bd54-4ab0-8f8e-d6b524fb6f19"
+    - pk: "f8ef6dd5-bd54-4ab0-8f8e-d6b524fb6f19"
       object_type: "nautobot_golden_config.compliancerule"
 - feature_slug: "snmp"
   platform_network_driver: "cisco_ios"
