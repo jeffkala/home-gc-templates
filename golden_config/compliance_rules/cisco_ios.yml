@@ -9,8 +9,8 @@
   config_ordered: false
   match_config: "ntp server"
   config_type: "cli"
-  # tags:
-  #   - pk: "f8ef6dd5-bd54-4ab0-8f8e-d6b524fb6f19"
+  tags:
+    - name: "gc-tag"
   #     object_type: "extras.tags"
 - feature_slug: "snmp"
   platform_network_driver: "cisco_ios"
