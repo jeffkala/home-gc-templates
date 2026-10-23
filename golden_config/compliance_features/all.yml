@@ -8,3 +8,6 @@
 - name: "snmp"
   slug: "snmp"
   description: "snmp server validation"
+- name: "line"
+  slug: "line"
+  description: "line vty configs"
